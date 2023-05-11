@@ -3,9 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock, Paper, Sciccors</title>
-        <script src=index.js></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
+        <div class = "game">
+            <div class = "scoreboard">
+                <h1>Round: <span class="round">-</span></h1>
+                    <div class = "score">
+                        <p>Player: <span class="player_score">0</span></p>
+                        <p>-</p>
+                        <p>Computer: <span class="computer_score">0</span></p>
+                    </div>
+            </div>
+            <div class = "selection">
+            <h2></h2>
+                <div class = "dispchoices"></div>
+            </div>
+            <div class = "buttons">   
+                <button onclick="play('rock')" id="rock"><img src="rock.png"/><br/>Rock</button>
+                <button onclick="play('paper')" id="paper"><img src="paper.png"/><br/>Paper</button>
+                <button onclick="play('scissors')"id="scissors"><img src="scissors.png"/><br/>Scissors</button>
+            </div>
+        </div>
+    <script src=index.js></script>
     </body>
 </html>
