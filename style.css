@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #8BC6EC, #9599E2);
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.game {
+    background-image: linear-gradient(to bottom right, #8BC6EC, #9599E2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 800px;
+    border: 5px solid black;
+    border-radius: 80px;
+    margin: 50px;
+    margin-top: 0px;
+}
+
+h1 {
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    gap: 80px;
+}
+
+.score p {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-bottom: 1px solid rgb(24, 24, 24);
+    border-top: 1px solid rgb(24, 24, 24);
+    border-collapse: collapse;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#tablechoices tr:nth-child(even) {background-color: rgb(24, 24, 24); color: white;}
+
+.pselection {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+}
+
+h2 {
+    width: 790px;
+    text-align: center;
+    border-bottom: 5px solid black;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+h3 {
+    width: 790px;
+    text-align: center;
+    font-size: 24px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+}
+
+#rock, #paper, #scissors{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+    text-decoration: overline;
+}
+
+.buttons img:hover {
+    opacity: 80%;
+}
+
+.buttons img:active {
+    background-image: linear-gradient(to bottom right, #8BC6EC, #9599E2);
+    border-radius: 100%;
+}
+
+img {
+    padding-bottom: 5px;
+}
+
+h5 {
+    position: fixed;
+    right: 10px; bottom: 10px;
+    font-style: italic;
+    color: white;
+    margin-bottom: 0px;
+    font-size: 14px;
+}

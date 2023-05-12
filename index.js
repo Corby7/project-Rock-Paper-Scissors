@@ -3,24 +3,11 @@ let playerScore = 0;
 let computerScore = 0;
 let round = 1;  
 
-const btns = document.querySelectorAll('button');
 const h2selection = document.querySelector('h2');
+const selection = document.querySelector('.selection');
+const pfinalresult = document.createElement('h3'); 
  
-//buttonclick is playerselection and then plays game
-// for (i of btns) {
-//     i.addEventListener('click', (e) => {
-//         console.log(e.target);
-//         playerSelection = (e.);
-//         if (round < 6) {
-//             playGame();
-//             round++;
-//             }
-//     });
-// } 
-
-
 function play(rockpaperscissors) {
-    console.log(rockpaperscissors);
     playerSelection = (rockpaperscissors);
     if (round < 6) {
         playGame();
@@ -28,7 +15,11 @@ function play(rockpaperscissors) {
     }
 }
 
-////function for capitalizing first letter
+// function leaderBold() {
+//         document.getElementsByName('p1').style.fontWeight = "bold";
+// }
+
+// //function for capitalizing first letter
 // function capitalizeFirstLetter(string) {
 //     return string.charAt(0).toUppercase() + string.slice(1);
 // }
@@ -42,33 +33,38 @@ function getComputerChoice() {
 function updateScoreboard(playerScore, computerScore) {
     document.querySelector('.player_score').textContent = playerScore;
     document.querySelector('.computer_score').textContent = computerScore;
-    document.querySelector('.round').textContent = round;
+    document.querySelector('.round').textContent = round + "/5";
 }
 
 
 function playGame () {
-    const computerSelection = getComputerChoice(); 
+    const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     updateScoreboard(playerScore, computerScore);
 
-    const selection = document.querySelector('.selection');
-    const dispchoices = document.querySelector('.dispchoices');
-        const p1selection = document.createElement('p1');
-        p1selection.className = "pselection";
-            const nodep1 = document.createTextNode(round + ":  " + "You chose: " + playerSelection);
-        const p2selection = document.createElement('p2');
-            const nodep2 = document.createTextNode("Computer chose: " + computerSelection);
-        p2selection.className = "pselection";
-        const vsselection = document.createElement('p3');
-            const nodevs = document.createTextNode("vs.");
-        vsselection.className = "pselection";
-        p1selection.appendChild(nodep1);
-        vsselection.appendChild(nodevs)
-        p2selection.appendChild(nodep2);
-    dispchoices.appendChild(p1selection);
-    dispchoices.appendChild(vsselection);
-    dispchoices.appendChild(p2selection);
-        const pfinalresult = document.createElement('h2');
+    function capPlayer(string) {
+        var str = playerSelection;
+        var capplayerSelection = str.charAt(0).toUpperCase() + str.slice(1);
+        return capplayerSelection;
+    }
+    
+    function capComputer(string) {
+        var str2 = computerSelection;
+        var capcomputerSelection = str2.charAt(0).toUpperCase() + str2.slice(1);
+        return capcomputerSelection;  
+    }
+    
+    function insRow() {
+        var table = document.getElementById("tablechoices");
+        var row = table.insertRow(round);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = round;
+        cell2.innerHTML = capPlayer(playerSelection);
+        cell3.innerHTML = capComputer(computerSelection);
+    }
+    insRow();
     
     if (round === 5) {
         selection.appendChild(pfinalresult);
@@ -78,6 +74,13 @@ function playGame () {
             pfinalresult.textContent = "Too bad, you lost against the computer." + " (" + playerScore + " - " + computerScore + ")";
         } else {
             pfinalresult.textContent = "You tied the computer!" + " (" + playerScore + " - " + computerScore + ")";
+        }
+        setTimeout(playAnother, 5000, pfinalresult.textContent);
+    }
+
+    function playAnother(string) {
+        if (confirm(string + "\nDo you want to play another game?") == true) {
+            location.reload();
         }
     }
 

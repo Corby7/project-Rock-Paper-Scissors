@@ -2,29 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Rock, Paper, Sciccors</title>
+        <title>Rock, Paper, Scissors</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h4>ROCK, PAPER, SCISSORS</h4>
         <div class = "game">
             <div class = "scoreboard">
-                <h1>Round: <span class="round">-</span></h1>
+                <h1>ROUND: &nbsp;&nbsp;<span class="round">-/5</span></h1>
                     <div class = "score">
-                        <p>Player: <span class="player_score">0</span></p>
+                        <p>PLAYER: &nbsp;&nbsp;<span class="player_score">0</span></p>
                         <p>-</p>
-                        <p>Computer: <span class="computer_score">0</span></p>
+                        <p>COMPUTER: &nbsp;&nbsp;<span class="computer_score">0</span></p>
                     </div>
             </div>
             <div class = "selection">
             <h2></h2>
-                <div class = "dispchoices"></div>
+                <table id = "tablechoices">
+                    <tr>
+                        <th>Round:</th>
+                        <th>You chose:</th>
+                        <th>Computer chose:</th>
+                    </tr>
+                </table>
             </div>
             <div class = "buttons">   
-                <button onclick="play('rock')" id="rock"><img src="rock.png"/><br/>Rock</button>
-                <button onclick="play('paper')" id="paper"><img src="paper.png"/><br/>Paper</button>
-                <button onclick="play('scissors')"id="scissors"><img src="scissors.png"/><br/>Scissors</button>
-            </div>
+                <button onclick="play('rock')" id="rock"><img src="rockblack.png"/><br/>ROCK</button>
+                <button onclick="play('paper')" id="paper"><img src="paperblack.png"/><br/>PAPER</button>
+                <button onclick="play('scissors')"id="scissors"><img src="scissorsblack.png"/><br/>SCISSORS</button>
+            </div>   
         </div>
+        <h5>@JulesCorbijn</h5>
     <script src=index.js></script>
     </body>
 </html>
