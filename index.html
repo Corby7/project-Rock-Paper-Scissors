@@ -12,22 +12,22 @@
         <h4>ROCK, PAPER, SCISSORS</h4>
         <div class = "game">
             <div class = "scoreboard">
-                <h1>ROUND: &nbsp;&nbsp;<span class="round">-/5</span></h1>
+                <h1>ROUND: &nbsp;&nbsp;<span id="round">-/5</span></h1>
                     <div class = "score">
-                        <p>PLAYER: &nbsp;&nbsp;<span class="player_score">0</span></p>
+                        <p>PLAYER: &nbsp;&nbsp;<span id="player_score">0</span></p>
                         <p>-</p>
-                        <p>COMPUTER: &nbsp;&nbsp;<span class="computer_score">0</span></p>
+                        <p>COMPUTER: &nbsp;&nbsp;<span id="computer_score">0</span></p>
                     </div>
             </div>
             <div class = "selection">
-            <h2></h2>
-                <table id = "tablechoices">
-                    <tr>
-                        <th>Round:</th>
-                        <th>You chose:</th>
-                        <th>Computer chose:</th>
-                    </tr>
-                </table>
+                <h2></h2>
+                    <table id = "tablechoices">
+                        <tr>
+                            <th>Round:</th>
+                            <th>You chose:</th>
+                            <th>Computer chose:</th>
+                        </tr>
+                    </table>
             </div>
             <div class = "buttons">   
                 <button onclick="play('rock')" id="rock"><img src="rockblack.png"/><br/>ROCK</button>
@@ -35,7 +35,7 @@
                 <button onclick="play('scissors')"id="scissors"><img src="scissorsblack.png"/><br/>SCISSORS</button>
             </div>   
         </div>
-        <h5>@JulesCorbijn</h5>
+        <h5>/JulesCorbijn/</h5>
     <script src=index.js></script>
     </body>
 </html>
