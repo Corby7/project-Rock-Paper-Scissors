@@ -1,10 +1,11 @@
 html {
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-}
+}   
 
 body, .game, .scoreboard, .selection {
     display: flex;
@@ -47,11 +48,11 @@ h2, h3 {
     margin-top: 0px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, header, h5 {
     margin-bottom: 0px;
 } 
 
-h4, h5 {
+header, h5 {
     font-style: italic;
 }
 
@@ -59,9 +60,11 @@ h4, h5 {
     color: white;
 }
 
-h4 {
+header {
     font-size: 50px;
     text-decoration: underline;
+    font-weight: bold;
+    padding-top: 60px;
 }
 
 .game {
@@ -141,7 +144,12 @@ img {
     padding-bottom: 5px;
 }
 
-h5 {
-    position: fixed;
-    right: 10px; bottom: 10px;
+h6 {
+    font-family: monospace;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: 13.280px;
+    text-shadow: 2px 2px white;
 }
